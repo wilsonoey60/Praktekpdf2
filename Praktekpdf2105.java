@@ -3,29 +3,34 @@ import java.io.*;
 import javax.swing.*;
 class Praktekpdf2105 {
   public static void main(String[] args) {
-  	Scanner Nama = new Scanner(System.in);
+  	Scanner Input = new Scanner(System.in);
+  	String nama, alamat, tipepesawat;
+
+  	int bayar, harga;
     System.out.print("Nama : ");
-    System.out.println(Nama.nextLine());
+    nama = Input.nextLine();
     System.out.print("Alamat : ");
-    double alamat = Nama.nextInt();
-    System.out.print("Tipe Pesawat = ");
-    double tipepesawat = Nama.nextInt();
-    System.out.print("Bayar = ");
-    long bayar = Nama.nextInt();
-    char karakter1 = 'A';
-    char karakter2 = 'B';
-    char karakter3 = 'C';
+    alamat = Input.nextLine();
+    System.out.print("Tipe Pesawat : ");
+    tipepesawat = Input.nextLine();
+    System.out.print("Bayar : ");
+    bayar = Input.nextInt();
+    String karakter1 = "A";
+    String karakter2 = "B";
+    String karakter3 = "C";
+    
     if(tipepesawat == karakter1) {
-   		bayar -= 5000000;
+   		harga = 5000000;
 	} 
 	else if(tipepesawat == karakter2) {
-   		bayar -= 2000000;
+   		harga = 2000000;
 	} 
 	else if(tipepesawat == karakter3) {
-   		bayar -= 1000000;
+   		harga = 1000000;
 	}
-    System.out.println("Nama =" +Nama);
-    System.out.println("Alamat =" +alamat);
-    System.out.println("Kembalian =" +bayar);
+	harga = Input.nextInt();
+    System.out.println("Nama : " +nama);
+    System.out.println("Alamat : " +alamat);
+    System.out.println("Kembalian : " +(bayar - harga));
   }
 }
